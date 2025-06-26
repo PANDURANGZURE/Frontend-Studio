@@ -29,3 +29,27 @@
 /* .hero{
   background-image: linear-gradient(cyan,white , white );
 } */
+
+
+/* styles.css (or in your JSX style tag) */
+#myCanvas {
+  filter: grayscale(0%) blur(0px);
+  transition: filter 0.3s ease-in-out;
+}
+
+#myCanvas:hover {
+  filter: grayscale(80%) blur(4px);
+}
+
+/* Hide scrollbar but keep scrolling enabled */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.img1:hover{
+  filter: grayscale(20%);
+}

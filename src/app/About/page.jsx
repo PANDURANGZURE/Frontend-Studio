@@ -1,14 +1,9 @@
 import React from 'react'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
 
-function about() {
+function page() {
   return (
-    <>
-    <Header/>
-    <Footer/>
-    </>
+    <div>page</div>
   )
 }
 
-export default about
+export default page
