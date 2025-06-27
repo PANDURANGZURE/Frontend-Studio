@@ -64,17 +64,17 @@ function Hero() {
       {/* Fixed Crosshair Elements */}
       <div
         ref={vLineRef}
-        className="fixed top-0 left-0 h-screen w-px bg-white pointer-events-none z-50"
+        className="fixed top-0 left-0 h-screen w-px bg-white pointer-events-none z-40"
       />
 
       <div
         ref={hLineRef}
-        className="fixed top-0 left-0 w-screen h-px bg-white pointer-events-none z-50"
+        className="fixed top-0 left-0 w-screen h-px bg-white pointer-events-none z-40"
       />
 
       <div
         ref={dotRef}
-        className=" bg-white fixed top-0 left-0 rounded-full pointer-events-none z-50"
+        className=" bg-white fixed top-0 left-0 rounded-full pointer-events-none z-40"
       />
 
       {/* Content */}
@@ -93,14 +93,19 @@ function Hero() {
         
         <p className="text2 mt-4 text-lg md:text-xl">Write.Compile.Launch.Your Website Starts Here.</p>
         
+        <div className="pointer-events-auto my-5">
         <Link href="/Compiler">
-        <button>
-          <div className="flex md:text-md bg-white my-5 text-black md:py-2  md:px-3 py-1  px-2 rounded-4xl  font-semibold">
+        
+
+        <button class="before:ease relative h-12 w-40 overflow-hidden border border-white bg-black text-black shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-purple-700 hover:before:-translate-x-40 rounded-3xl">
+      
+      <div className="flex md:text-md relative z-10  text-white justify-center items-center  rounded-4xl  font-semibold ">
           <p>Get Started </p>
           <ArrowUpRight className="m-0.5"/>
           </div>
-        </button>
+    </button>
         </Link>
+        </div>
         </div>
         <div className="md:h-1/2 md:w-1/2 z-50 hidden md:flex justify-center items-center  ">
         <SplineViewer/>
