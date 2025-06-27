@@ -9,6 +9,8 @@ import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link'
 import { IoLogoHtml5, IoLogoCss3  } from "react-icons/io5";
 import { FaJs } from "react-icons/fa";
+import StepperCard from "./StepperCard";
+
 
 function Hero() {
   const vLineRef = useRef(null);
@@ -80,24 +82,26 @@ function Hero() {
       {/* Content */}
       <Header />
       <img className="absolute top-0 right-0 -z-0  pointer-events-none " src="https://github.com/MiladiCode/3D-startup-app/blob/main/gradient.png?raw=true" alt="" />
+      <div className="absolute top-0 z-10 right-0 w-[400px] h-[400px] bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full blur-3xl opacity-30  pointer-events-none" />
+
       <div className="h-screen text-center text-lg text-white md:flex  md:mt-20  pointer-events-none">
       <div className="h-1/2 mb-10 md:w-1/2 z-50 flex  md:hidden justify-center items-center  ">
         <SplineViewer/>
         </div>
-        <div className=" md:mt-12 md:w-1/2 text-start md:ml-14 ml-5 text-balance">
-        <p className="md:text-7xl text-4xl text-balance text1"><span className="">T</span>ransforming Ideas</p>
+        <div className=" md:mt-12 md:w-1/2 text-start md:ml-14 ml-5 text-balance ">
+        <p className="md:text-7xl text-4xl text-balance text1"><span className="">T</span>ransforming <span className="">Ideas</span></p>
         <p className="md:text-7xl text-4xl text-balance text1">into Innovative</p>
         <p className="md:text-7xl text-4xl text-balance text1"><div className="flex gap-3">
-        <p>Websites</p> <span className="md:text-7xl text-4xl p-1 ">{icons[currentIndex]}</span>
+        <p>Websites</p> <span className="md:text-7xl text-4xl p-1 hover:text-purple-500 pointer-events-none">{icons[currentIndex]}</span>
         </div> </p>
         
-        <p className="text2 mt-4 text-lg md:text-xl">Write.Compile.Launch.Your Website Starts Here.</p>
+        <p className="text2 mt-4 text-lg md:text-xl"><span className="text-purple-600">Write.</span>Compile.Launch.Your Website Starts Here.</p>
         
         <div className="pointer-events-auto my-5">
         <Link href="/Compiler">
         
 
-        <button class="before:ease relative h-12 w-40 overflow-hidden border border-white bg-black text-black shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-purple-700 hover:before:-translate-x-40 rounded-3xl">
+        <button class="before:ease relative z-50 h-12 w-40 overflow-hidden border border-white bg-black text-black shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-purple-700 hover:before:-translate-x-40 rounded-3xl">
       
       <div className="flex md:text-md relative z-10  text-white justify-center items-center  rounded-4xl  font-semibold ">
           <p>Get Started </p>
@@ -111,6 +115,9 @@ function Hero() {
         <SplineViewer/>
         </div>
       </div>
+
+      <StepperCard/>
+
       <Footer />
     </div>
   );

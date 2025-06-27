@@ -53,3 +53,12 @@
 .img1:hover{
   filter: grayscale(20%);
 }
+
+.hover-animate-text {
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), color 0.3s cubic-bezier(0.4,0,0.2,1), text-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.hover-animate-text:hover {
+  transform: scale(1.08) translateY(-2px);
+  color: #a78bfa; /* Tailwind purple-400 */
+  text-shadow: 0 2px 16px #a78bfa55;
+}
