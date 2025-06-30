@@ -16,7 +16,20 @@
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: 'number1';
+  src: url('/fonts/number.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'number2';
+  src: url('/fonts/number2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 .text1 {
   font-family: 'saurav', sans-serif;
@@ -24,6 +37,14 @@
 
 .text2 {
   font-family: 'saurav2', sans-serif;
+}
+
+.number2 {
+  font-family: 'number2', sans-serif;
+}
+
+.number1 {
+  font-family: 'number1', sans-serif;
 }
 
 /* .hero{

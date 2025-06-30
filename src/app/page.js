@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Loader from "./Components/Loader";
 import Hero from "./Components/Hero";
 import Link from 'next/link';
 
