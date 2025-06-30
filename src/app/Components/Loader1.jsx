@@ -79,7 +79,7 @@ const Loader = ({ onFinish }) => {
       >
         <div className="absolute bottom-10 right-10">
         <h1
-          
+          ref={textRef}
           className=" number1 text-6xl font-extrabold text-purple-600   tracking-tight select-none"
           style={{ fontFamily: "'Fira Code', monospace" }}
         >

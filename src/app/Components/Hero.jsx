@@ -101,7 +101,7 @@ function Hero() {
         <Link href="/Compiler">
         
 
-        <button class="before:ease relative z-50 h-12 w-40 overflow-hidden border border-white bg-black text-black shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-purple-700 hover:before:-translate-x-40 rounded-3xl">
+        <button className="before:ease relative z-50 h-12 w-40 overflow-hidden border border-white bg-black text-black shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-purple-700 hover:before:-translate-x-40 rounded-3xl">
       
       <div className="flex md:text-md relative z-10  text-white justify-center items-center  rounded-4xl  font-semibold ">
           <p>Get Started </p>

@@ -4,6 +4,7 @@ import Editor from "@monaco-editor/react";
 import Header from "../Components/Header";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
+import Footer from "../Components/Footer";
 
 function App() {
   const [html, setHtml] = useState("<h1>Made with Efforts & ❤️ By Saurav Zure</h1>");
@@ -56,14 +57,7 @@ function App() {
 
   return (
     <div className="bg-black w-full min-h-screen relative overflow-x-hidden">
-      {/* Background Effects */}
-      <img
-        className="absolute top-0 right-0 -z-0 pointer-events-none w-full max-w-[600px]"
-        src="https://github.com/MiladiCode/3D-startup-app/blob/main/gradient.png?raw=true"
-        alt=""
-      />
-      <div className="absolute top-0 z-10 right-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full blur-3xl opacity-30 pointer-events-none" />
-
+      
       {/* Header & Title */}
       <Header />
       <div className="md:m-8 m-3">
@@ -72,15 +66,23 @@ function App() {
       </div>
 
       {/* Tab Bar + Download Button */}
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center px-2 md:px-4 pt-2 md:pt-4 gap-2 md:gap-0">
+      <div className="bg-[#181818] md:m-10 m-5 rounded-xl z-50 ">
+        <div className="flex gap-2 p-2 ">
+          <div className="h-4 w-4 rounded-2xl bg-[#3c3c3c]"></div>
+          <div className="h-4 w-4 rounded-2xl bg-[#3c3c3c]"></div>
+          <div className="h-4 w-4 rounded-2xl bg-[#3c3c3c]"></div>
+        </div>
+        <div className=" bg-[#202020] m-2  rounded-xl">
+
+        <div className="flex flex-col z-50 md:flex-row md:justify-between md:items-center px-2 md:px- pt-2 md:pt-4 gap-2 md:gap-0">
         <div className="flex text-white font-mono space-x-2 md:space-x-4 justify-center md:justify-start">
           {['html', 'css', 'js'].map((tab) => (
             <button
               key={tab}
               className={`px-3 md:px-4 py-2 rounded-t-md text-xs md:text-base ${
                 activeTab === tab
-                  ? 'bg-gray-800 border-b-2 border-blue-500'
-                  : 'bg-gray-700 hover:bg-gray-600'
+                  ? 'bg-[#181818] border-b-2 border-blue-500'
+                  : 'bg-[#3c3c3c] hover:bg-gray-600'
               }`}
               onClick={() => setActiveTab(tab)}
             >
@@ -93,14 +95,14 @@ function App() {
 
         <button
           onClick={handleDownloadZip}
-          className="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm px-3 md:px-4 py-2 rounded-md w-full md:w-auto"
+          className="before:ease text-white relative z-50 h-12 w-40 overflow-hidden border border-white bg-[#3c3c3c] mb-1 text-black shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-purple-700 hover:before:-translate-x-40 rounded-3xl"
         >
           Download ZIP
         </button>
       </div>
 
       {/* Editor & Output Responsive Layout */}
-      <div className="flex flex-col md:flex-row w-full h-[80vh] md:h-[70vh] border-t border-gray-800 mt-2 md:mt-0">
+      <div className="flex z-50 flex-col md:flex-row w-full h-[80vh] md:h-[70vh] border-t border-gray-800 mt-2 md:mt-0">
         {/* Editor */}
         <div className="w-full md:w-1/2 h-1/2 md:h-full border-b md:border-b-0 md:border-r border-gray-700">
           <Editor
@@ -118,7 +120,7 @@ function App() {
         </div>
 
         {/* Output */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full border-t md:border-t-0 border-gray-700">
+        <div className="w-full z-50 md:w-1/2 h-1/2 md:h-full border-t md:border-t-0 border-gray-700">
           <iframe
             srcDoc={srcDoc}
             title="Output"
@@ -130,6 +132,9 @@ function App() {
           />
         </div>
       </div>
+        </div>
+      </div>
+      <Footer/>
     </div>
   );
 }

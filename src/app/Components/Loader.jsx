@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const Loader = () => {
+const Loader = ({ onFinish }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -12,18 +12,21 @@ const Loader = () => {
           return prev + 1;
         } else {
           clearInterval(interval);
+          if (onFinish) {
+            onFinish();
+          }
           return 100;
         }
       });
-    },25); // speed of the loader
+    }, 25); // speed of the loader
 
     return () => clearInterval(interval); // cleanup
-  }, []);
+  }, [onFinish]);
 
   return (
-    <div className='w-screen h-screen bg-black text-white  ' >
+    <div className='w-screen h-screen bg-black text-white flex justify-center items-center' >
 
-      <div >{progress}%</div>
+      <div className='text-7xl font-saurav1' >{progress}%</div>
     </div>
   );
 };

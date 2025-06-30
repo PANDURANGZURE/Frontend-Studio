@@ -16,7 +16,6 @@ function Header() {
               <li className='text2 hover:text-purple-500 text-white'><Link href="/">Home</Link></li>
               <li className='text2 hover:text-purple-500 text-white'><Link href="/Compiler">Compiler</Link></li>
               <li className='text2 hover:text-purple-500 text-white'><Link href="/About">About</Link></li>
-              <li className='text2 hover:text-purple-500 text-white'><Link href="/Shery">testing</Link></li>
               <li className='text2 hover:text-purple-500 text-white text-2xl ml-2'><Link href="https://github.com/PANDURANGZURE/Frontend-Studio"><FaGithub/></Link></li>
             </ul>
           </div>

@@ -1,16 +1,17 @@
-// app/layout.js (or app/layout.tsx for TypeScript)
-import "./globals.css";
+// src/app/layout.js
+'use client';
 
-export const metadata = {
-  title: "Frontend Studio",
-  description: "An HTML , CSS AND JS COMPLIER ",
-};
+import './globals.css';
+import GlobalLoaderWrapper from './Components/GlobalLoaderWrapper';
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body className='bg-black' >
+        <GlobalLoaderWrapper>
+          {children}
+        </GlobalLoaderWrapper>
       </body>
     </html>
   );
