@@ -66,23 +66,23 @@ function Hero() {
       {/* Fixed Crosshair Elements */}
       <div
         ref={vLineRef}
-        className="fixed top-0 left-0 h-screen w-px bg-white pointer-events-none z-40"
+        className="fixed top-0 md:block hidden  left-0 h-screen w-px bg-white pointer-events-none z-40"
       />
 
       <div
         ref={hLineRef}
-        className="fixed top-0 left-0 w-screen h-px bg-white pointer-events-none z-40"
+        className="fixed top-0 left-0 w-screen md:block hidden h-px bg-white pointer-events-none z-40"
       />
 
       <div
         ref={dotRef}
-        className=" bg-white fixed top-0 left-0 rounded-full pointer-events-none z-40"
+        className=" bg-white fixed top-0 md:block hidden left-0 rounded-full pointer-events-none z-40"
       />
 
       {/* Content */}
       <Header />
       <img className="absolute top-0 right-0 -z-0  pointer-events-none " src="https://github.com/MiladiCode/3D-startup-app/blob/main/gradient.png?raw=true" alt="" />
-      <div className="absolute top-0 z-10 right-0 w-[400px] h-[400px] bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full blur-3xl opacity-30  pointer-events-none" />
+      <div className="absolute top-0 md:z-10 -z-10 right-0 w-[400px] h-[400px] bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full blur-3xl opacity-30  pointer-events-none" />
 
       <div className="h-screen text-center text-lg text-white md:flex  md:mt-20  pointer-events-none">
       <div className="h-1/2 mb-10 md:w-1/2 z-50 flex  md:hidden justify-center items-center  ">
@@ -91,9 +91,9 @@ function Hero() {
         <div className=" md:mt-12 md:w-1/2 text-start md:ml-14 ml-5 text-balance ">
         <p className="md:text-7xl text-4xl text-balance text1"><span className="">T</span>ransforming <span className="">Ideas</span></p>
         <p className="md:text-7xl text-4xl text-balance text1">into Innovative</p>
-        <p className="md:text-7xl text-4xl text-balance text1"><div className="flex gap-3">
-        <p>Websites</p> <span className="md:text-7xl text-4xl p-1 hover:text-purple-500 pointer-events-none">{icons[currentIndex]}</span>
-        </div> </p>
+        <div className="md:text-7xl text-4xl text-balance text1 flex gap-3">
+        <span>Websites</span> <span className="md:text-7xl text-4xl p-1 hover:text-purple-500 pointer-events-none">{icons[currentIndex]}</span>
+        </div>
         
         <p className="text2 mt-4 text-lg md:text-xl"><span className="text-purple-600">Write.</span>Compile.Launch.Your Website Starts Here.</p>
         
@@ -116,7 +116,7 @@ function Hero() {
         </div>
       </div>
 
-      <StepperCard/>
+      <StepperCard className="z-50"/>
 
       <Footer />
     </div>
