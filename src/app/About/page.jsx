@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { Figma, Github, Linkedin, Instagram } from 'lucide-react'
 import { SiGithub, SiNextdotjs } from 'react-icons/si'
 import { IoLogoVercel } from "react-icons/io5";
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 export default function About() {
   return (
