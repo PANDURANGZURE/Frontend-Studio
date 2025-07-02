@@ -15,7 +15,7 @@ export default function About() {
         
 
         <div className='w-full text-white'>
-          <div className='md:flex p-4'>
+          <div className='md:flex '>
             {/* Left Side */}
             <div className='md:w-1/2'>
               {/* About This Project */}
@@ -80,9 +80,9 @@ I built Frontend Studio to solve this problem with a fast, minimal, and distract
                         </div>
                       </div>
                       <div className='md:w-1/2'>
-                        <p className='text-xl p-2'>Analytics</p>
+                        <p className='text-xl p-2'>PDF Download</p>
                         <div className="flex flex-wrap px-2 gap-2 h-auto">
-                          <Image src="/assets/any.png" alt="any" width={48} height={48} />
+                          <img className='bg-white h-10 w-24 rounded-3xl px-1' src="https://lh5.googleusercontent.com/proxy/5Xkgfg1aDhEyjS0koJHq4eh98IxcwvhXB069zAZlXZlcfLxfzBl0mJquCialkla2FsLqLI9vS-rP" alt="any" width={48} height={48} />
                         </div>
                       </div>
                     </div>
@@ -96,23 +96,21 @@ I built Frontend Studio to solve this problem with a fast, minimal, and distract
                           <IoLogoVercel className="h-10 w-10" />
                         </div>
                       </div>
-                      <div className='md:w-1/2'>
-                        <p className='text-xl p-2'>Python Execution</p>
-                        <div className='flex px-2 gap-2 h-12'>
-                          <Image src="/assets/py.png" alt="py" width={48} height={48} />
-                        </div>
-                      </div>
+                      
                     </div>
 
                     {/* Frontend Stack */}
                     <div className='mb-4'>
                       <p className='text-xl p-2'>Frontend</p>
-                      <div className='flex px-2 gap-2 h-12 flex-wrap'>
+                      <div className='flex px-2 gap-2 h-12 flex-wrap items-center'>
                         <Image src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" width={48} height={48} />
                         <Image src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind" width={48} height={48} />
-                        <Image src='/public/gsap.png' alt="GSAP" width={48} height={48} />
+                        <Image src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" width={48} height={48} alt="" />
                         <SiNextdotjs className='text-4xl' />
-                        <Image src="/assets/monaco editor.svg" alt="Monaco" width={48} height={48} />
+                        <Image src="data:image/svg+xml,%3csvg%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%201024'%3e%3cstyle%3e.st0{fill:%23f6f6f6;fill-opacity:0}.st1{fill:%23fff}.st2{fill:%23167abf}%3c/style%3e%3cpath%20class='st0'%20d='M1024%201024H0V0h1024v1024z'/%3e%3cpath%20class='st1'%20d='M1024%2085.333v853.333H0V85.333h1024z'/%3e%3cpath%20class='st2'%20d='M0%2085.333h298.667v853.333H0V85.333zm1024%200v853.333H384V85.333h640zm-554.667%20160h341.333v-64H469.333v64zm341.334%20533.334H469.333v64h341.333l.001-64zm128-149.334H597.333v64h341.333l.001-64zm0-149.333H597.333v64h341.333l.001-64zm0-149.333H597.333v64h341.333l.001-64z'/%3e%3c/svg%3e" alt="Monaco" width={48} height={48} />
+                        
+                      </div>
+                      <div className='m-4'>
                         <Image src="https://raw.githubusercontent.com/PANDURANGZURE/project-img/bc78cc1a3a962fb92cda3e74c44d079394581fd2/assets/icon/webpack.svg" alt="Webpack" width={48} height={48} />
                       </div>
                     </div>
@@ -135,7 +133,7 @@ I built Frontend Studio to solve this problem with a fast, minimal, and distract
                 <h1 className="text-2xl font-bold mb-4">Developer</h1>
                 <div className="md:flex items-center justify-center gap-4">
                   <div className="bg-black rounded-xl overflow-hidden flex items-center justify-center">
-                    <Image src="/assets/saurav.png" alt="Pandurang Zure" width={160} height={160} className="object-cover" />
+                    <img src="https://codepaglu.netlify.app/assets/saurav-DBLYY0Jo.png" alt="Pandurang Zure" width={160} height={160} className="object-cover" />
                   </div>
                   <div>
                     <p className="text-2xl text-purple-600 font-bold">Pandurang Zure</p>
@@ -146,13 +144,13 @@ I built Frontend Studio to solve this problem with a fast, minimal, and distract
                       My goal is to build websites that are not only functional and efficient but also engaging and intuitive.
                     </p>
                     <div className="flex space-x-4 mt-2">
-                      <a href="https://github.com/PANDURANGZURE" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
+                      <a href="https://github.com/PANDURANGZURE" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition">
                         <Github size={22} />
                       </a>
-                      <a href="https://www.linkedin.com/in/pandurang-santosh-zure-au3112/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
+                      <a href="https://www.linkedin.com/in/pandurang-santosh-zure-au3112/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition">
                         <Linkedin size={22} />
                       </a>
-                      <a href="https://www.instagram.com/_anonymous_3112_/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
+                      <a href="https://www.instagram.com/_anonymous_3112_/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition">
                         <Instagram size={22} />
                       </a>
                     </div>

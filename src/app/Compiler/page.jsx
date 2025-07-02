@@ -32,7 +32,7 @@ function App() {
     zip.file("script.js", js);
 
     zip.generateAsync({ type: "blob" }).then((content) => {
-      saveAs(content, "saurav.zip");
+      saveAs(content, "Frontend-Studio.zip");
     });
   };
 
