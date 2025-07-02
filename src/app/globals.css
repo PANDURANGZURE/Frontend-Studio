@@ -83,3 +83,10 @@
   color: #a78bfa; /* Tailwind purple-400 */
   text-shadow: 0 2px 16px #a78bfa55;
 }
+
+
+@layer base {
+  ::selection {
+    @apply bg-purple-200 text-purple-600;
+  }
+}

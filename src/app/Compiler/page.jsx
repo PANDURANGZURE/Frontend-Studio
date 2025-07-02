@@ -5,6 +5,8 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
+import { VscRunAll } from "react-icons/vsc";
+import { FaDownload } from "react-icons/fa6";
 
 function App() {
   const [html, setHtml] = useState("");
@@ -68,7 +70,7 @@ function App() {
         </div>
 
         <div className="bg-[#202020] m-2 rounded-xl">
-          <div className="flex flex-col md:flex-row md:justify-between items-center px-2 pt-2 gap-2">
+          <div className="flex flex-col md:flex-row flex-col-reverse md:justify-between items-center px-2 pt-2 gap-2">
             {/* Tab Buttons */}
             <div className="flex text-white font-mono space-x-2 md:space-x-4">
               {['html', 'css', 'js'].map((tab) => (
@@ -77,7 +79,7 @@ function App() {
                   onClick={() => setActiveTab(tab)}
                   className={`px-3 md:px-4 py-2 rounded-t-md text-xs md:text-base ${
                     activeTab === tab
-                      ? 'bg-[#181818] border-b-2 border-blue-500'
+                      ? 'bg-[#181818] border-b-2 border-white'
                       : 'bg-[#3c3c3c] hover:bg-gray-600'
                   }`}
                 >
@@ -89,18 +91,18 @@ function App() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 md:m-0 m-2 ">
               <button
                 onClick={handleRun}
-                className="text-white z-50 h-12 w-32 bg-[#3c3c3c] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
+                className="text-white flex justify-center items-center gap-2 z-50 md:h-12 md:w-32 w-20 bg-[#3c3c3c] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
               >
-                Run
+                <VscRunAll className="h-10"/>Run
               </button>
               <button
                 onClick={handleDownloadZip}
-                className="text-white z-50 h-12 w-40 bg-[#3c3c3c] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
+                className="text-white z-50 flex justify-center items-center gap-2 h-12 w-40 bg-[#3c3c3c] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
               >
-                Download ZIP
+                <FaDownload/>Download ZIP
               </button>
             </div>
           </div>
