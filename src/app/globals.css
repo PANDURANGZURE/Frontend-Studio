@@ -90,3 +90,7 @@
     @apply bg-purple-200 text-purple-600;
   }
 }
+
+button{
+  cursor: pointer;
+}

@@ -16,7 +16,7 @@ function Footer() {
       <div className=' md:flex text-center gap-4'>
         <div><Link  className='hover:text-purple-600' href='/'>Home</Link></div>
         <div><Link  className='hover:text-purple-600' href='/Compiler'>Compiler</Link></div>
-        <div><Link  className='hover:text-purple-600' href='/about'>About</Link></div>
+        <div><Link  className='hover:text-purple-600' href='/About'>About</Link></div>
         </div>
     </footer>
     

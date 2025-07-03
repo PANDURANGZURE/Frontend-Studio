@@ -77,6 +77,13 @@ const Loader = ({ onFinish }) => {
         ref={loaderRef}
         className="fixed inset-0 bg-black z-50 flex items-center justify-center overflow-hidden"
       >
+        <div className="absolute top-10 left-7 text-white ">
+          <span className="text-purple-600 px-1">|</span>
+          Frontend Studio
+          </div>
+
+          
+
         <div className="absolute bottom-10 right-10">
         <h1
           ref={textRef}

@@ -9,7 +9,7 @@ function Header() {
     <div className='z-50 w-screen '>
       <nav className='md:h-20 z-50 h-14  p-2 flex items-center'>
           <div>
-            <h1 className=" text1 text-white mx-6  text-3xl font-bold">Frontend Studio.</h1>
+            <h1 className=" text1 text-white mx-6  text-3xl font-bold">Frontend Studio<span className='text-purple-600 p-0 m-0'>.</span></h1>
           </div>
           <div className='ml-auto md:mr-20 pt-1'>
             <ul className='hidden gap-4 md:flex'>

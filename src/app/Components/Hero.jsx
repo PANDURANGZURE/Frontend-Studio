@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { IoLogoHtml5, IoLogoCss3  } from "react-icons/io5";
 import { FaJs } from "react-icons/fa";
 import StepperCard from "./StepperCard";
+import Wavy from "./Wavy";
 
 
 function Hero() {
@@ -88,7 +89,7 @@ function Hero() {
       <div className="h-1/2 mb-10 md:w-1/2 z-50 flex  md:hidden justify-center items-center  ">
         <SplineViewer/>
         </div>
-        <div className=" md:mt-12 md:w-1/2 text-start md:ml-14 ml-5 text-balance ">
+        <div className=" md:mt-12 md:w-1/2 text-start md:ml-14 ml-5 text-balance z-50 ">
         <p className="md:text-7xl text-4xl text-balance text1"><span className="">T</span>ransforming <span className="">Ideas</span></p>
         <p className="md:text-7xl text-4xl text-balance text1">into Innovative</p>
         <div className="md:text-7xl text-4xl text-balance text1 flex gap-3">
@@ -116,7 +117,10 @@ function Hero() {
         </div>
       </div>
 
-      <StepperCard className="z-50"/>
+      
+      <div className="absolute w-screen md:block hidden ">
+        <Wavy/>
+      </div>
 
       <Footer />
     </div>

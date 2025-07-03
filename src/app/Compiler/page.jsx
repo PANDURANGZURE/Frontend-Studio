@@ -11,7 +11,7 @@ import { FaDownload } from "react-icons/fa6";
 function App() {
   const [html, setHtml] = useState("");
   const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
+  const [js, setJs] = useState("console.log('Did you like this??')");
   const [srcDoc, setSrcDoc] = useState("");
   const [activeTab, setActiveTab] = useState('html');
 
@@ -94,13 +94,13 @@ function App() {
             <div className="flex gap-2 md:m-0 m-2 ">
               <button
                 onClick={handleRun}
-                className="text-white flex justify-center items-center gap-2 z-50 md:h-12 md:w-32 w-20 bg-[#3c3c3c] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
+                className="text-white flex justify-center items-center gap-2 z-50 md:h-12 md:w-32 w-20 bg-[#181818] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
               >
                 <VscRunAll className="h-10"/>Run
               </button>
               <button
                 onClick={handleDownloadZip}
-                className="text-white z-50 flex justify-center items-center gap-2 h-12 w-40 bg-[#3c3c3c] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
+                className="text-white z-50 flex justify-center items-center gap-2 h-12 w-40 bg-[#181818] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
               >
                 <FaDownload/>Download ZIP
               </button>
