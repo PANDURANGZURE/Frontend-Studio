@@ -13,7 +13,7 @@ function Footer() {
       <a className='hover:text-purple-600' href="https://www.linkedin.com/in/pandurang-santosh-zure-au3112/"><FaLinkedin /></a>
       <a className='hover:text-purple-600' href="https://github.com/PANDURANGZURE"><FaGithub /></a>
       </div>
-      <div className=' md:flex text-center gap-4'>
+      <div className=' md:flex text-center text2 gap-4'>
         <div><Link  className='hover:text-purple-600' href='/'>Home</Link></div>
         <div><Link  className='hover:text-purple-600' href='/Compiler'>Compiler</Link></div>
         <div><Link  className='hover:text-purple-600' href='/About'>About</Link></div>

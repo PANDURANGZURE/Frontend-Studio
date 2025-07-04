@@ -83,7 +83,7 @@ function Hero() {
       {/* Content */}
       <Header />
       <img className="absolute top-0 right-0 -z-0  pointer-events-none " src="https://github.com/MiladiCode/3D-startup-app/blob/main/gradient.png?raw=true" alt="" />
-      <div className="absolute top-0 md:z-10 -z-10 right-0 w-[400px] h-[400px] bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full blur-3xl opacity-30  pointer-events-none" />
+      <div className="absolute top-10 md:z-10 -z-10 right-0 w-[400px] h-[400px] bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 rounded-full blur-3xl opacity-30  pointer-events-none" />
 
       <div className="h-screen text-center text-lg text-white md:flex  md:mt-20  pointer-events-none">
       <div className="h-1/2 mb-10 md:w-1/2 z-50 flex  md:hidden justify-center items-center  ">

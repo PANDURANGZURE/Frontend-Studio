@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import Editor from "@monaco-editor/react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
@@ -9,11 +9,12 @@ import { VscRunAll } from "react-icons/vsc";
 import { FaDownload } from "react-icons/fa6";
 
 function App() {
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("console.log('Did you like this??')");
+  const [html, setHtml] = useState("<h1>Made with Love and Efforts By Saurav Zure</h1>");
+  const [css, setCss] = useState(" ");
+  const [js, setJs] = useState("console.log('Made with Love and Efforts By Saurav Zure')");
   const [srcDoc, setSrcDoc] = useState("");
   const [activeTab, setActiveTab] = useState('html');
+  const runButtonRef = useRef(null);
 
   const getEditorValue = () => {
     if (activeTab === 'html') return html;
@@ -52,21 +53,40 @@ function App() {
     `);
   };
 
+   useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        runButtonRef.current?.click(); // Step 2: Simulate click
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+
   return (
     <div className="bg-black w-full min-h-screen relative overflow-x-hidden">
       <Header />
 
       <div className="md:m-8 m-3">
         <p className="text-white text1 text-xl md:text-3xl p-2">HTML, CSS & JS Compiler</p>
-        <p className="text-white px-2 text2 text-xs md:text-sm">Made with Love and Efforts By Saurav Zure</p>
+        <p className="text-white px-2 text2 text-xs md:text-sm">Made with Love and Efforts By <span className="text-purple-600">Saurav Zure</span></p>
       </div>
 
       <div className="bg-[#181818] md:m-10 m-5 rounded-xl z-50">
         {/* Tab + Buttons */}
-        <div className="flex gap-2 p-2">
+        <div className="flex items-center ">
+          <div className="flex gap-2 p-2">
           <div className="h-4 w-4 rounded-2xl bg-[#3c3c3c]"></div>
           <div className="h-4 w-4 rounded-2xl bg-[#3c3c3c]"></div>
           <div className="h-4 w-4 rounded-2xl bg-[#3c3c3c]"></div>
+        </div>
+
+        <div className=" p-2 flex  ml-auto">
+          <p className="text-[#4c4c4c] text-xs font-semibold text2 md:text-sm px-2 ">Tip: Press <span className="text-purple-600"><kbd>Ctrl</kbd> + <kbd>S</kbd></span>  to Run</p>
+        </div>
         </div>
 
         <div className="bg-[#202020] m-2 rounded-xl">
@@ -94,6 +114,7 @@ function App() {
             <div className="flex gap-2 md:m-0 m-2 ">
               <button
                 onClick={handleRun}
+                 ref={runButtonRef}
                 className="text-white flex justify-center items-center gap-2 z-50 md:h-12 md:w-32 w-20 bg-[#181818] border border-white rounded-3xl hover:shadow-purple-700 transition-all"
               >
                 <VscRunAll className="h-10"/>Run
